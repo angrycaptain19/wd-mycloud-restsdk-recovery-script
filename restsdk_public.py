@@ -19,10 +19,7 @@ def findNextParent(fileID):
             return value['Parent']
 def hasAnotherParent(fileID):
     #checks to see if a db item has another parent
-    if fileDIC[fileID]['Parent']!=None:
-        return True
-    else:
-        return False
+    return fileDIC[fileID]['Parent']!=None
 def findTree(fileID,name,parent):
     #turn a file ID into an original path
     path=fileDIC[parent]['Name']+"/"+name
